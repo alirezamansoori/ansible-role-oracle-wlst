@@ -9,7 +9,7 @@
     line="JVM_ARGS=\"-Dprod.props.file='${WL_HOME}'/.product.properties ${WLST_PROPERTIES} ${JVM_D64} ${UTILS_MEM_ARGS} ${COMMON_JVM_ARGS} ${CONFIG_JVM_ARGS} -Djava.security.egd=file:///dev/urandom\""
 
 - set_fact:
-    execute_command: " {{ wlst_path }} "
+    execute_command: "{{ oracle_wlst_exec }} {{ wlst_path }} "
 
 - debug:
     msg: "command '{{ execute_command }}' will be executed by {{ oracle_wslt_os_user }} user"
