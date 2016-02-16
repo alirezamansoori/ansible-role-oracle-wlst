@@ -9,3 +9,5 @@
   when: oracle_wlst_create_domain
 
 - include: execute-wlst.yml
+  become: yes
+  become_user: "{{ oracle_wslt_os_user }}"

@@ -16,6 +16,4 @@
 
 - name: execute wlst
   shell: "{{ execute_command }} >> /tmp/oracle-wlst.log"
-  become: yes
-  become_user: "{{ oracle_wslt_os_user }}"
   when: oracle_wlst_execute
