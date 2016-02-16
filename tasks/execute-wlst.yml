@@ -1,7 +1,7 @@
 ---
 #
 - set_fact:
-    oracle_wlst_exec: {{ oracle_wlst_oracle_home }}/oracle_common/common/bin/wlst.sh
+    oracle_wlst_exec: "{{ oracle_wlst_oracle_home }}/oracle_common/common/bin/wlst.sh"
 
 - lineinfile:
     dest: "{{ oracle_wlst_exec }}"
